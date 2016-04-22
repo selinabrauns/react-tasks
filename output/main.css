@@ -1,6 +1,11 @@
 body {
   margin: 0;
   padding: 0; }
+  body a {
+    text-decoration: none;
+    color: black; }
+  body li {
+    list-style: none; }
 
 .content {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -21,6 +26,21 @@ body {
         width: 16%; }
     .content .main .page-content {
       margin: 10px 20px; }
+      .content .main .page-content .drop-down .head {
+        padding: 5px 10px;
+        background-color: lightgray;
+        display: block; }
+      .content .main .page-content .drop-down ul {
+        padding: 0;
+        margin: 0;
+        border: 1px solid lightgray; }
+        .content .main .page-content .drop-down ul .list-item a {
+          padding: 5px 10px;
+          display: block;
+          width: 100%;
+          box-sizing: border-box; }
+        .content .main .page-content .drop-down ul .list-item:hover {
+          background-color: #F2F1F1; }
     .content .main .footer {
       position: absolute;
       bottom: 0;

@@ -1,6 +1,15 @@
 body {
   margin: 0;
   padding: 0;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  li {
+    list-style: none;
+  }
 }
 
 .content {
@@ -28,6 +37,34 @@ body {
 
     .page-content{
       margin: 10px 20px;
+
+      .drop-down {
+
+        .head {
+          padding: 5px 10px;
+          background-color: lightgray;
+          display: block;
+        }
+
+        ul {
+          padding: 0;
+          margin: 0;
+          border: 1px solid lightgray;
+
+          .list-item {
+            a {
+              padding: 5px 10px;
+              display: block;
+              width: 100%;
+              box-sizing: border-box;
+            }
+
+            &:hover {
+              background-color: #F2F1F1;
+            }
+          }
+        }
+      }
     }
 
     .footer {
