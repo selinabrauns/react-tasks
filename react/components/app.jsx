@@ -1,4 +1,7 @@
 var React = require('react'),
-    ReactDOM = require('react-dom');
+    ReactDOM = require('react-dom'),
+    Page = require('./elements/page');
 
-ReactDOM.render(Routes, document.querySelector('.content'));
+var InitialPage = React.createElement(Page);
+
+ReactDOM.render(InitialPage, document.querySelector('.content'));
