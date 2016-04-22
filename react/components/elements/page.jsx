@@ -7,7 +7,10 @@ module.exports = React.createClass({
         return <div className='main'>
             <div className='header'><img src='img/lev_logo_rgb_web.png'/></div>
             <div className='page-content'>
-                <DropDown />
+                <div className='col'>
+                    <DropDown />
+                </div>
+                <div className='col'></div>
             </div>
             <div className='footer'><p>Good luck!</p></div>
         </div>

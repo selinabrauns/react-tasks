@@ -36,7 +36,11 @@ body {
     }
 
     .page-content{
-      margin: 10px 20px;
+      margin: 20px;
+
+      .col {
+        width: 50%;
+      }
 
       .drop-down {
 
