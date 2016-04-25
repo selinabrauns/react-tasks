@@ -1,14 +1,26 @@
 var React = require('react'),
+    Reflux = require('reflux'),
     DropDown = require('./drop-down'),
-    List = require('./list');
+    List = require('./list'),
+    Actions = require('./../actions'),
+    Store = require('./../store');
 
 
 module.exports = React.createClass({
 
+    mixins: [
+        Reflux.listenTo(Store, 'onUserChange')
+    ],
+
     getInitialState: function(){
         return {
-            options: [{id: 1, name: 'File'}, {id: 2, name: 'Document'}, {id: 3, name: 'Folder'}]
+            options: [{id: 1, name: 'File'}, {id: 2, name: 'Document'}, {id: 3, name: 'Folder'}],
+            users: []
         }
+    },
+
+    componentWillMount: function(){
+       Actions.getUsers();
     },
 
     render: function(){
@@ -17,6 +29,7 @@ module.exports = React.createClass({
             <div className='page-content'>
                 <div className='col'>
                     <DropDown options={this.state.options}/>
+                    <DropDown options={this.state.users} />
                 </div>
                 <div className='col'>
                     <List list={this.state.options} addItem={this.addItem} reset={this.resetList}/>
@@ -24,6 +37,10 @@ module.exports = React.createClass({
             </div>
             <div className='footer'><p>Good luck!</p></div>
         </div>
+    },
+
+    onUserChange: function(event, users){
+        this.setState({users: users});
     },
 
     addItem: function(item){
