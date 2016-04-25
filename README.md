@@ -46,6 +46,7 @@ Hints:
 - Install node packages when necessary
 - What you should know here: How to fetch information from APIs and how to process them within a components life cycle
 
+
 4) Implement closing behaviour for DropDown when clicking outside of dropdown.
 
 Hints:
