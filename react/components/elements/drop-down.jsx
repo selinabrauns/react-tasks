@@ -4,14 +4,13 @@ module.exports = React.createClass({
     getInitialState: function(){
         return {
             headText: 'Chose option',
-            options: [{id: 1, name: 'Banana'}, {id: 2, name: 'Apple'}, {id: 3, name: 'Orange'}],
             open: false
         }
     },
 
     render: function(){
         var self = this;
-        var list = this.state.options.map(function(item){
+        var list = this.props.options.map(function(item){
             return <li key={item.id} className='list-item'><a href='javascript:void(0)' onClick={self.handleOptionClick.bind(null, item.name)}>{item.name}</a></li>
         });
 
