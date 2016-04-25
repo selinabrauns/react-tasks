@@ -24,5 +24,6 @@ b) List : consisting out of two InputField instances, a list element, displaying
 
 Hints:
 - Make sure there will be no warnings about key properties in lists.
+- Make sure DropDown and List always display same options except when List gets filtered.
 
 
