@@ -7,7 +7,7 @@ module.exports = React.createClass({
 
     getInitialState: function(){
         return {
-            options: [{id: 1, name: 'Banana'}, {id: 2, name: 'Apple'}, {id: 3, name: 'Orange'}]
+            options: [{id: 1, name: 'File'}, {id: 2, name: 'Document'}, {id: 3, name: 'Folder'}]
         }
     },
 
